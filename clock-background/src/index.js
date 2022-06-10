@@ -20,7 +20,7 @@ class App extends React.Component {
         const meridiem = this.state.time.split(' ')[1];
 
         if(typeof meridiem !== 'undefined') {
-            return ((hour >= 6 && meridiem === 'AM' && hour !== 12) || (hour < 6 && meridiem === 'PM')) ? 'day' : 'night';
+            return ((hour >= 6 && meridiem === 'AM' && hour !== 12) || ((hour < 6 || hour === 12) && meridiem === 'PM')) ? 'day' : 'night';
         } else {
             return (hour >= 6 && hour < 18) ? 'day' : 'night';
         }
