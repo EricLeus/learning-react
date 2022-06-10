@@ -1,0 +1,19 @@
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.toggle-container h1 {
+    margin: 0 15px;
+}
+
+.toggle-container.day h1 {
+    color: black;
+}
+
+.toggle-container.night h1 {
+    color: white;
+}
